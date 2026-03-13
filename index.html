@@ -2,15 +2,18 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
 		<title>Мой PWA</title>
-		<link rel="manifest" href="/manifest.json" />
+		<link rel="manifest" href="manifest.json" />
+		<link rel="icon" href="icon-192.png" />
 	</head>
 	<body>
 		<h1>Привет! Это мой PWA 🚀</h1>
 
       <script>
          if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js')
+            navigator.serviceWorker.register('/sw.js', { scope: '/' })
          }
       </script>
 	</body>
